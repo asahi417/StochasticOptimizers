@@ -14,45 +14,19 @@ cd StochasticOptimizers
 pip install .
 ```
 
-* learning curve
-	* sklearn's learning curve comparing split data
-	* This library use warm_start (save time)
-* multilabel classification
-	* skleran's OneVsRestClassifier cant use warm_start
-	* This library include OVR classifier base which can use warm_start
-* plot curves
-	* learning curve with 95% CI
-* logger
-	* learning progress can be seen in logger file
+Usage can be checked in [sample use case](https://github.com/asahi417/StochasticOptimizers/blob/master/example/classification_mnist.ipynb).
 
-### estimator
-* SGD (Stochastic Gradient Descent)
-* FOBOS (Forward Backward Splitting)
-* APFBS (Adaptive Proximal Forward Backward Splitting)
-* SDA (Stochastic Dual Averaging)
-* RDA (Reguralized Dual Averaging)
-* PDA (Projection-based Dual Averaging)
-* AdaGrad (RDA type & FOBOS type)
-* Variance SGD 
-* AdaDelta
-* Adam
-* RMSprop
-
-* building....
-	* TONGA, SGD-QN, sLBFGS
-
-### framework
-* Testing Framework (sklearn based)
-	* GridSearch
-		* grid search method
-	* LearningCurve
-		* compare different online estimator
-	* OneVsRestClassifier
-
-### Other
-* PlotCurves
-	* plot learning curves
-
-### usage
-* some example is set in "example/"
-* almost as same as sklearn
+## Optimizers
+- ***Gradient Descents***
+    - stochastic gradient descent (nesterov's acceleration and momentum), [code](./stochastic_optimizer/estimator/SGD.py) 
+    - Forward Backward Splitting (FOBOS), [code](./stochastic_optimizer/estimator/FOBOS.py), [paper](http://www.jmlr.org/papers/volume10/duchi09a/duchi09a.pdf)
+    - Adaptive Proximal Forward Backward Splitting (APFBS), [code](./stochastic_optimizer/estimator/APFBS.py), [paper](https://www.arl.nus.edu.sg/twiki6/pub/ARL/BibEntries/Pelekanakis_and_Chitre_2014_Adaptive_Sparse_Channel.pdf)
+    - AdaGrad, [code](./stochastic_optimizer/estimator/AdaGrad.py), [paper](http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf)
+    - Variance SGD, [code](./stochastic_optimizer/estimator/VSGD.py), [paper](https://arxiv.org/pdf/1206.1106.pdf)
+    - AdaDelta, [code](./stochastic_optimizer/estimator/AdaDelta.py), [paper](https://arxiv.org/pdf/1212.5701.pdf)
+    - Adam, [code](./stochastic_optimizer/estimator/Adam.py), [paper](https://arxiv.org/pdf/1412.6980.pdf%20%22%20entire%20document)
+    - RMSprop, [code](./stochastic_optimizer/estimator/rmsprop.py), [slide](https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)
+- ***Dual Averaging***
+    - stochastic dual averaging, [code](./stochastic_optimizer/estimator/SDA.py), [paper](http://ium.mccme.ru/postscript/s12/GS-Nesterov%20Primal-dual.pdf)
+    - reguralized dual averaging, [code](./stochastic_optimizer/estimator/RDA.py), [paper](http://www.jmlr.org/papers/volume11/xiao10a/xiao10a.pdf)
+    - projection-based dual averaging, [code](./stochastic_optimizer/estimator/PDA.py), [paper](https://asahi417.github.io/assets/papers/tsp_pda_with_bio.pdf), [slide](https://asahi417.github.io/assets/slides/icassp_17_asahi.pdf)
