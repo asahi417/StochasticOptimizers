@@ -2,23 +2,26 @@ import os
 import numpy as np
 import json
 
-from scipy.sparse import csr
-from datetime import datetime as dt
-
 from sklearn.model_selection import train_test_split
-
 from sklearn.model_selection import KFold
 from sklearn.externals import joblib
 from sklearn.base import clone
 
 from collections import OrderedDict
 
-from .utility import create_log
+from .plot_curve import plot_curve
+from ..log import create_log
 
 
-def LearningCurveClassifier(X, y, classifiers, rounds=1, split=10, path="",
-                            key=None, test_size=0.3):
-    """
+def LearningCurveClassifier(X,
+                            y,
+                            classifiers,
+                            rounds: int = 1,
+                            split: int = 10,
+                            test_size: float = 0.3,
+                            path: str = "./"):
+    """ Fit optimizer and accumulate historical errors for learning curve plot
+
      Parameters
     ----------
     X: input, ndarray, shape(sample, order)
@@ -28,29 +31,26 @@ def LearningCurveClassifier(X, y, classifiers, rounds=1, split=10, path="",
              ("ADAGRAD-fbs", AdaGradFbsClassifier(eta0=0.1))]
     rounds: number of realizetion
     split: number of split (point of learning curve)
-    path: (optinal) where to save the result
-    key: (optinal) file name of save data
+    path: path to save the result
 
      Return
     ----------
     path to the saved result
     """
+    assert rounds >= 1
+    assert split > 1
+    assert 0.0 < test_size < 1.0
 
-    if key is None:
-        path = path + dt.today().isoformat().replace(":", "-")
-    else:
-        path = path + key
     if not os.path.exists(path):
-        os.makedirs(path)
-    logger = create_log("%s/logger.log" % path)
-    logger.info("Path: %s" % path)
-    logger.info("X shape: %i, %i" % X.shape)
-    logger.info("y shape: %i" % len(y))
+        os.makedirs(path, exist_ok=True)
+
+    logger = create_log()
+    logger.info("*** Learning Curve Test ***")
+    logger.info("input shape: %i, %i" % X.shape)
+    logger.info("output shape: %i" % len(y))
     logger.info("train size: %0.2f" % (len(y)*(1-1/split)))
 
-    multilabel = True if y.ndim > 1 else False
-
-    # mc: misclassification rate, yy: error rate for test data, nz: sparsity
+    # mc: error rate, yy: error rate for test data, nz: sparsity
     mc, yy, nz = OrderedDict(), OrderedDict(), OrderedDict()
     try:
         for name, clf in classifiers:
@@ -58,8 +58,7 @@ def LearningCurveClassifier(X, y, classifiers, rounds=1, split=10, path="",
             for r in range(rounds):
                 logger.info("  rounds %i / %i" % (r+1, rounds))
                 # Data Construction
-                X_train, X_test, y_train, y_test = \
-                    train_test_split(X, y, test_size=test_size, random_state=r)
+                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=r)
                 _fold = {'n_splits': split, 'shuffle': True, 'random_state': r}
                 cv = KFold(**_fold).split(X_train, y_train)
                 ind = [i for _, i in cv]
@@ -108,6 +107,14 @@ def LearningCurveClassifier(X, y, classifiers, rounds=1, split=10, path="",
                        "data_classes": len(clf__.classes_),
                        "rounds": rounds, "test_size": test_size,
                        "data_size": X.shape[0], "data_order": X.shape[1]}, f)
+        # plot learning curve
+        fig = plot_curve(
+            yy,
+            path=path,
+            train_size=np.ceil(X.shape[0] * (1 - test_size)).astype(int),
+            rounds=rounds,
+            split=split)
+        return fig
     except Exception as err:
-            logger.exception("%s", err)
-    return path
+        logger.exception("%s", err)
+        return None
