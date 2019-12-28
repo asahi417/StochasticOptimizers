@@ -1,9 +1,16 @@
 # Simple Stochastic Optimizers Test
-Simple stochastic optimizer comparison over a few primitive supervision.
+[![dep1](https://img.shields.io/badge/Tensorflow-1.3+-blue.svg)](https://www.tensorflow.org/)
+
+Simple stochastic optimizer comparison over classification/regression tasks.
 The repository is aimed to test recent stochastic optimizers' basic capacity with a linear model,
 and not any neural networks as we just want to see the convergence properties.
 The implementation follows [scikit learn](https://scikit-learn.org/stable/) as
 each algorithm has *fit* and *predict*. 
+
+## Get started
+```
+git clone https://github.com/asahi417/StochasticOptimizers
+```
 
 * learning curve
 	* sklearn's learning curve comparing split data

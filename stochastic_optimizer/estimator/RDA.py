@@ -1,5 +1,3 @@
-import numpy as np
-from .utility import Gradient, BaseClassifier, BaseRegressor
 from .SDA import SDAClassifier, SDARegressor
 
 
