@@ -26,7 +26,7 @@ def GridSearch(X,
             logger.info(" - searching: %s" % name)
             clf = GridSearchCV(clf_, params, scoring=scoring, cv=cv).fit(X, y)
             for k in clf.best_estimator_.get_params().keys():
-                logger.info(" -> %s:%s" % (k, clf.best_estimator_.get_params()[k]))
+                logger.info("       %s:%s" % (k, clf.best_estimator_.get_params()[k]))
             if path is not None:
                 joblib.dump(clf, "%s/%s.pkl" % (path, name))
                 logger.info("  the best model is saved at %s" % "%s/%s.pkl" % (path, name))

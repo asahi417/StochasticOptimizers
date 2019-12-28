@@ -10,6 +10,8 @@ each algorithm has *fit* and *predict*.
 ## Get started
 ```
 git clone https://github.com/asahi417/StochasticOptimizers
+cd StochasticOptimizers
+pip install .
 ```
 
 * learning curve
@@ -22,14 +24,6 @@ git clone https://github.com/asahi417/StochasticOptimizers
 	* learning curve with 95% CI
 * logger
 	* learning progress can be seen in logger file
-
-### requirement
-* Python 3.4.0
-* library  
-	* matplotlib==2.0.1  
-	* numpy==1.12.1  
-	* scikit-learn==0.18.1
-	* scipy==0.19.0
 
 ### estimator
 * SGD (Stochastic Gradient Descent)
