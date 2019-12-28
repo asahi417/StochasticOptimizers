@@ -1,5 +1,6 @@
 from .SGD import SGDClassifier, SGDRegressor
 from .APFBS import APFBSClassifier, APFBSRegressor
+from .FOBOS import FOBOSClassifier, FOBOSRegressor
 
 from .SDA import SDAClassifier, SDARegressor
 from .RDA import RDAClassifier, RDARegressor
