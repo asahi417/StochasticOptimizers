@@ -1,0 +1,14 @@
+H1, 2017-07-16 21:57:29,564     INFO Path: examples_result/grid_search/regression_gridsearching
+H1, 2017-07-16 21:57:29,566     INFO Algorithm: ['AdaDelta']
+H1, 2017-07-16 21:57:29,566     INFO  Grid searching: AdaDelta
+H1, 2017-07-16 22:00:43,646     INFO    Best fit
+H1, 2017-07-16 22:00:43,647     INFO      alpha:0.0001
+H1, 2017-07-16 22:00:43,647     INFO      eps_:0.0112883789168
+H1, 2017-07-16 22:00:43,648     INFO      fit_intercept:True
+H1, 2017-07-16 22:00:43,648     INFO      loss:square
+H1, 2017-07-16 22:00:43,649     INFO      momentum:1
+H1, 2017-07-16 22:00:43,649     INFO      n_jobs:1
+H1, 2017-07-16 22:00:43,649     INFO      penalty:l1
+H1, 2017-07-16 22:00:43,650     INFO      rms:False
+H1, 2017-07-16 22:00:43,650     INFO      var_w:0.01
+H1, 2017-07-16 22:00:43,651     INFO      warm_start:True

@@ -1,0 +1,61 @@
+H1, 2017-07-17 00:59:25,523     INFO Path: examples_result/grid_search/classifier_gridsearching
+H1, 2017-07-17 00:59:25,523     INFO Algorithm: ['SGD', 'AdaGrad', 'RMSprop', 'Adam', 'AdaDelta']
+H1, 2017-07-17 00:59:25,523     INFO  Grid searching: SGD
+H1, 2017-07-17 00:59:32,030     INFO    Best fit
+H1, 2017-07-17 00:59:32,030     INFO      alpha:0.0001
+H1, 2017-07-17 00:59:32,031     INFO      eta0:5e-05
+H1, 2017-07-17 00:59:32,031     INFO      fit_intercept:True
+H1, 2017-07-17 00:59:32,031     INFO      loss:log
+H1, 2017-07-17 00:59:32,031     INFO      n_jobs:10
+H1, 2017-07-17 00:59:32,031     INFO      penalty:None
+H1, 2017-07-17 00:59:32,031     INFO      power_t:0.5
+H1, 2017-07-17 00:59:32,031     INFO      warm_start:True
+H1, 2017-07-17 00:59:32,035     INFO  Grid searching: AdaGrad
+H1, 2017-07-17 00:59:37,512     INFO    Best fit
+H1, 2017-07-17 00:59:37,512     INFO      alpha:0.0001
+H1, 2017-07-17 00:59:37,513     INFO      eps_:1e-08
+H1, 2017-07-17 00:59:37,513     INFO      eta0:0.0483017241379
+H1, 2017-07-17 00:59:37,513     INFO      fit_intercept:True
+H1, 2017-07-17 00:59:37,513     INFO      loss:log
+H1, 2017-07-17 00:59:37,513     INFO      momentum:1
+H1, 2017-07-17 00:59:37,513     INFO      n_jobs:10
+H1, 2017-07-17 00:59:37,513     INFO      penalty:l1
+H1, 2017-07-17 00:59:37,514     INFO      warm_start:True
+H1, 2017-07-17 00:59:37,516     INFO  Grid searching: RMSprop
+H1, 2017-07-17 01:01:44,282     INFO    Best fit
+H1, 2017-07-17 01:01:44,282     INFO      alpha:0.0001
+H1, 2017-07-17 01:01:44,282     INFO      eps_:1e-08
+H1, 2017-07-17 01:01:44,282     INFO      eta0:0.0138362068966
+H1, 2017-07-17 01:01:44,282     INFO      fit_intercept:True
+H1, 2017-07-17 01:01:44,283     INFO      loss:log
+H1, 2017-07-17 01:01:44,283     INFO      momentum:1
+H1, 2017-07-17 01:01:44,283     INFO      n_jobs:10
+H1, 2017-07-17 01:01:44,283     INFO      penalty:l1
+H1, 2017-07-17 01:01:44,283     INFO      rms:True
+H1, 2017-07-17 01:01:44,283     INFO      var_w:0.270526315789
+H1, 2017-07-17 01:01:44,284     INFO      warm_start:True
+H1, 2017-07-17 01:01:44,296     INFO  Grid searching: Adam
+H1, 2017-07-17 01:04:13,431     INFO    Best fit
+H1, 2017-07-17 01:04:13,431     INFO      alpha:0.0001
+H1, 2017-07-17 01:04:13,432     INFO      eps_:1e-08
+H1, 2017-07-17 01:04:13,432     INFO      eta0:0.0172827586207
+H1, 2017-07-17 01:04:13,432     INFO      fit_intercept:True
+H1, 2017-07-17 01:04:13,432     INFO      loss:log
+H1, 2017-07-17 01:04:13,432     INFO      momentum:1
+H1, 2017-07-17 01:04:13,432     INFO      n_jobs:10
+H1, 2017-07-17 01:04:13,433     INFO      penalty:l1
+H1, 2017-07-17 01:04:13,433     INFO      rms:True
+H1, 2017-07-17 01:04:13,433     INFO      var_w:0.114210526316
+H1, 2017-07-17 01:04:13,433     INFO      warm_start:True
+H1, 2017-07-17 01:04:13,447     INFO  Grid searching: AdaDelta
+H1, 2017-07-17 01:09:19,610     INFO    Best fit
+H1, 2017-07-17 01:09:19,610     INFO      alpha:0.0001
+H1, 2017-07-17 01:09:19,610     INFO      eps_:6.21016941892e-08
+H1, 2017-07-17 01:09:19,610     INFO      fit_intercept:True
+H1, 2017-07-17 01:09:19,611     INFO      loss:log
+H1, 2017-07-17 01:09:19,611     INFO      momentum:1
+H1, 2017-07-17 01:09:19,611     INFO      n_jobs:10
+H1, 2017-07-17 01:09:19,611     INFO      penalty:l1
+H1, 2017-07-17 01:09:19,611     INFO      rms:True
+H1, 2017-07-17 01:09:19,611     INFO      var_w:0.478947368421
+H1, 2017-07-17 01:09:19,611     INFO      warm_start:True
