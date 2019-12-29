@@ -44,7 +44,7 @@ class RMSprop(object):
 class RMSpropRegressor(BaseRegressor, RMSprop):
     def __init__(self, loss="square", eta0=0.3,
                  fit_intercept=True, warm_start=False,
-                 n_jobs=1, momentum=1, var_w=0.1, eps_=10**-6):
+                 n_jobs=1, momentum=1, var_w=0.1, eps_=10**-6, **kwargs):
         self.set_params(loss=loss, eta0=eta0, alpha=0.0, penalty=None,
                         fit_intercept=fit_intercept, warm_start=warm_start,
                         n_jobs=n_jobs)
@@ -56,7 +56,7 @@ class RMSpropRegressor(BaseRegressor, RMSprop):
 class RMSpropClassifier(BaseClassifier, RMSprop):
     def __init__(self, loss="log", eta0=0.3,
                  fit_intercept=True, warm_start=False,
-                 n_jobs=1, momentum=1, var_w=0.1, eps_=10**-6):
+                 n_jobs=1, momentum=1, var_w=0.1, eps_=10**-6, **kwargs):
         self.set_params(loss=loss, eta0=eta0, alpha=0.0, penalty=None,
                         fit_intercept=fit_intercept, warm_start=warm_start,
                         n_jobs=n_jobs)

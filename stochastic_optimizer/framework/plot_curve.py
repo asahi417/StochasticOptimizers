@@ -44,7 +44,7 @@ def plot_curve(yy,
     plt.xlabel("Iteration")
     plt.grid(True)
     if ylabel is None:
-        plt.ylabel("Error Rate")
+        plt.ylabel("Misclassification Rate")
     else:
         plt.ylabel(ylabel)
 
