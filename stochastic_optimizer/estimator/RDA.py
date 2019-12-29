@@ -13,7 +13,7 @@ class RDAClassifier(SDAClassifier):
                          warm_start=warm_start, n_jobs=n_jobs, eps_=eps_)
 
 
-class RDARegressor(SDAClassifier):
+class RDARegressor(SDARegressor):
     """Reguralized Dual Averaging."""
 
     def __init__(self, loss="square", eta0=0.1, alpha=10**-4,

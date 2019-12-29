@@ -21,6 +21,7 @@ __all__ = (
     "SGDClassifier", "SGDRegressor",
     "APFBSClassifier", "APFBSRegressor",
     "SDAClassifier", "SDARegressor",
+    "RDAClassifier", "RDARegressor",
     "PDAClassifier", "PDARegressor",
     "AdaDeltaClassifier", "AdaDeltaRegressor",
     "AdamClassifier", "AdamRegressor",
