@@ -14,7 +14,8 @@ cd StochasticOptimizers
 pip install .
 ```
 
-Usage can be checked in [sample use case](https://github.com/asahi417/StochasticOptimizers/blob/master/example/classification_mnist.ipynb).
+- [sample use case](https://github.com/asahi417/StochasticOptimizers/blob/master/example/classification_mnist.ipynb).
+
 
 ## Optimizers
 - ***Gradient Descents***
