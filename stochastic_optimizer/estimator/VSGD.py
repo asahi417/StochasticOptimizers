@@ -52,7 +52,7 @@ class VSGD(object):
 
      Bugs
     ----------
-    * rms: True, var_w:1 以外の時に上手くいかない
+    * only work wheb rms=True and var_w=1
     """
 
     def _fit(self, X, y, coef_, stats_=None):
@@ -69,7 +69,6 @@ class VSGD(object):
 
         # gradient generator instance
         opt = Gradient(self.loss)
-
 
         for i in range(X.shape[0]):
             gd = opt.grad(X[i, :], y[i], coef_)
@@ -138,10 +137,10 @@ class VSGD(object):
 
 
 class VSGDRegressor(BaseRegressor, VSGD):
-    def __init__(self, loss="square", alpha=10**-4, eps_=10**-6,
-                 penalty=None, fit_intercept=True, warm_start=False,
+    def __init__(self, loss="square", eps_=10**-6,
+                 fit_intercept=True, warm_start=False,
                  n_jobs=1, momentum=1, var_w=1, decay=False, rms=True):
-        self.set_params(loss=loss, alpha=alpha, penalty=penalty,
+        self.set_params(loss=loss, penalty=None, alpha=0.0,
                         fit_intercept=fit_intercept, warm_start=warm_start,
                         n_jobs=n_jobs)
         self.eps_ = eps_
@@ -152,10 +151,10 @@ class VSGDRegressor(BaseRegressor, VSGD):
 
 
 class VSGDClassifier(BaseClassifier, VSGD):
-    def __init__(self, loss="log", alpha=10**-4, eps_=10**-6,
-                 penalty=None, fit_intercept=True, warm_start=False,
+    def __init__(self, loss="log", eps_=10**-6,
+                 fit_intercept=True, warm_start=False,
                  n_jobs=1, momentum=1, var_w=1, decay=False, rms=True):
-        self.set_params(loss=loss, alpha=alpha, penalty=penalty,
+        self.set_params(loss=loss, penalty=None, alpha=0.0,
                         fit_intercept=fit_intercept, warm_start=warm_start,
                         n_jobs=n_jobs)
         self.eps_ = eps_

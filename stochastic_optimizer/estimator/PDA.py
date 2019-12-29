@@ -233,7 +233,7 @@ class PDA(object):
 
 
 class PDAClassifier(BaseClassifier, PDA):
-    def __init__(self, eta0=None, alpha=10**-4, penalty=None,
+    def __init__(self, eta0=0.1, alpha=10**-4, penalty=None,
                  fit_intercept=True, warm_start=False, prop=None,
                  eps_=10**-6, loss="half-space", n_jobs=1, var_w=None,
                  solver=None):

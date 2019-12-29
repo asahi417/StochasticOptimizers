@@ -28,6 +28,6 @@ pip install .
     - Adam, [code](./stochastic_optimizer/estimator/Adam.py), [paper](https://arxiv.org/pdf/1412.6980.pdf%20%22%20entire%20document)
     - RMSprop, [code](./stochastic_optimizer/estimator/rmsprop.py), [slide](https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)
 - ***Dual Averaging***
-    - stochastic dual averaging, [code](./stochastic_optimizer/estimator/SDA.py), [paper](http://ium.mccme.ru/postscript/s12/GS-Nesterov%20Primal-dual.pdf)
-    - reguralized dual averaging, [code](./stochastic_optimizer/estimator/RDA.py), [paper](http://www.jmlr.org/papers/volume11/xiao10a/xiao10a.pdf)
-    - projection-based dual averaging, [code](./stochastic_optimizer/estimator/PDA.py), [paper](https://asahi417.github.io/assets/papers/tsp_pda_with_bio.pdf), [slide](https://asahi417.github.io/assets/slides/icassp_17_asahi.pdf)
+    - stochastic dual averaging (SDA), [code](./stochastic_optimizer/estimator/SDA.py), [paper](http://ium.mccme.ru/postscript/s12/GS-Nesterov%20Primal-dual.pdf)
+    - reguralized dual averaging (RDA), [code](./stochastic_optimizer/estimator/RDA.py), [paper](http://www.jmlr.org/papers/volume11/xiao10a/xiao10a.pdf)
+    - projection-based dual averaging (PDA), [code](./stochastic_optimizer/estimator/PDA.py), [paper](https://asahi417.github.io/assets/papers/tsp_pda_with_bio.pdf), [slide](https://asahi417.github.io/assets/slides/icassp_17_asahi.pdf)
