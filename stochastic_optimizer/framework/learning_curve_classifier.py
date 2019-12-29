@@ -65,7 +65,7 @@ def LearningCurveClassifier(X,
                 # - Constructs a new estimator with the same parameters.
                 clf__ = clone(clf)
                 for i in range(len(ind)):
-                    logger.info("   iter %i / %i" % (i+1, split-1))
+                    # logger.info("   iter %i / %i" % (i+1, split-1))
                     clf__.fit(X_train[ind[i]], y_train[ind[i]])
                     _yy = 1-clf__.score(X_test, y_test)
                     if i == 0:
