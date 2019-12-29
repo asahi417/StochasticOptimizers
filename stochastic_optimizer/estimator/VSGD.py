@@ -140,7 +140,7 @@ class VSGDRegressor(BaseRegressor, VSGD):
     def __init__(self, loss="square", eps_=10**-6,
                  fit_intercept=True, warm_start=False,
                  n_jobs=1, momentum=1, var_w=1, decay=False, rms=True, **kwargs):
-        self.set_params(loss=loss, penalty=None, alpha=0.0,
+        self.set_params(loss=loss,
                         fit_intercept=fit_intercept, warm_start=warm_start,
                         n_jobs=n_jobs)
         self.eps_ = eps_
@@ -154,7 +154,7 @@ class VSGDClassifier(BaseClassifier, VSGD):
     def __init__(self, loss="log", eps_=10**-6,
                  fit_intercept=True, warm_start=False,
                  n_jobs=1, momentum=1, var_w=1, decay=False, rms=True, **kwargs):
-        self.set_params(loss=loss, penalty=None, alpha=0.0,
+        self.set_params(loss=loss,
                         fit_intercept=fit_intercept, warm_start=warm_start,
                         n_jobs=n_jobs)
         self.eps_ = eps_
