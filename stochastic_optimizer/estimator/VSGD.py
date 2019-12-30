@@ -129,10 +129,10 @@ class VSGD(object):
                         lr = h_ave*(g_ave*g_ave)/(h_var*g_var+self.eps_)
                         # Update
                         coef_ += -lr*g_mom
-                if self.penalty == "l1":
-                    prox = 1-lr*g_mom*self.alpha/(
-                             np.abs(coef_)+self.eps_)
-                    coef_ = coef_*prox*(prox > 0)
+                # if self.penalty == "l1":
+                #     prox = 1-lr*g_mom*self.alpha/(
+                #              np.abs(coef_)+self.eps_)
+                #     coef_ = coef_*prox*(prox > 0)
         return [coef_, [g_mom, g_ave, g_var, h_ave, h_var]]
 
 
