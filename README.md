@@ -1,5 +1,4 @@
 # Simple Stochastic Optimizers Test
-[![dep1](https://img.shields.io/badge/Tensorflow-1.3+-blue.svg)](https://www.tensorflow.org/)
 
 Simple stochastic optimizer comparison over classification/regression tasks.
 The repository was originally designed as a supplemental material for
