@@ -12,7 +12,7 @@ One can find sample use case in [notebook](https://github.com/asahi417/Stochasti
 and figure 1 is the learning curve from it.
 
 <p align="center">
-  <img src="./example/example_results/linear_model_mnist/error.pdf" width="500">
+  <img src="./example/example_results/linear_model_mnist/error.png" width="500">
   <br><i>Fig 1: Learning curve result on MNIST </i>
 </p>
 
