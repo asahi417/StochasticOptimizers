@@ -2,10 +2,20 @@
 [![dep1](https://img.shields.io/badge/Tensorflow-1.3+-blue.svg)](https://www.tensorflow.org/)
 
 Simple stochastic optimizer comparison over classification/regression tasks.
-The repository is aimed to test recent stochastic optimizers' basic capacity with a linear model,
+The repository was originally designed as a supplemental material for
+my lecture for stochastic optimization ([slide](https://asahi417.github.io/assets/slides/stochastic_optimization_slide.pdf)),   
+which was aimed to test recent stochastic optimizers' basic capacity with a linear model,
 and not any neural networks as we just want to see the convergence properties.
 The implementation follows [scikit learn](https://scikit-learn.org/stable/) as
 each algorithm has *fit* and *predict*. 
+One can find sample use case in [notebook](https://github.com/asahi417/StochasticOptimizers/blob/master/example/classification_mnist.ipynb),
+and figure 1 is the learning curve from it.
+
+<p align="center">
+  <img src="./example/example_results/linear_model_mnist/error.pdf" width="500">
+  <br><i>Fig 1: Learning curve result on MNIST </i>
+</p>
+
 
 ## Get started
 ```
@@ -13,9 +23,6 @@ git clone https://github.com/asahi417/StochasticOptimizers
 cd StochasticOptimizers
 pip install .
 ```
-
-- [sample use case](https://github.com/asahi417/StochasticOptimizers/blob/master/example/classification_mnist.ipynb).
-
 
 ## Optimizers
 - ***Gradient Descents***
